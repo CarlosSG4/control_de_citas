@@ -12,8 +12,3 @@ html_base = """
 def home(request):
     return render(request, "core/home.html")
 
-def about(request):
-    return HttpResponse(html_base + """
-    <h2>Acerca de</h2>
-    <p> Somos una empresa dedicada a el facil manejo de citas</p>
-    """)
