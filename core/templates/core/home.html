@@ -1,4 +1,15 @@
 {% extends "core/base.html" %}
 {% block content %}
-<p>Mira hice un  formulario de regsitro!!!!</p>
+    {% for especialidades in posts %}
+        <article class="media content-section">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <a class="mr-2" href="#">{{especialidades.author}}</a>
+                    <small class="text-muted"> {{ especialidades.date_posted|date:"F d, Y" }} </small>
+                </div>
+                <h2><a class="article-title" href="#"> {{especialidades.title}} </a></h2>
+                <p class="article-content" > {{especialidades.content}} </p>
+            </div>
+        </article>
+    {% endfor %}
 {% endblock content %}
