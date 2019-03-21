@@ -126,3 +126,6 @@ STATIC_URL = '/static/'
 ACCOUNT_ACTIVATION_DAYS = 7
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+LOGIN_REDIRECT_URL = 'core-home'
+LOGIN_URL = 'login'
