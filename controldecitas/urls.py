@@ -21,8 +21,10 @@ from pacientes import views as paciente_views
 
 urlpatterns = [
     path('', views.home, name="core-home"),
-    path('register/', paciente_views.register, name='register'),
-    path('profile/', paciente_views.profile, name='profile'),
+    path('registro/', paciente_views.register, name='registro'),
+    path('perfil/', paciente_views.profile, name='profile'),
+    path('consultorios/', paciente_views.consultorios, name='consultorios'),
+    path('especialidades/', paciente_views.especialidades, name='especialidades'),
     path('login/', auth_views.LoginView.as_view(template_name='pacientes/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='pacientes/logout.html'), name='logout'),
     path('admin/', admin.site.urls),
